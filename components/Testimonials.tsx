@@ -5,19 +5,22 @@ const testimonials = [
     quote:
       'The staff treated my mother with patience, warmth, and genuine respect. We always felt reassured.',
     name: 'Anita Shrestha',
-    role: 'Family Member'
+    role: 'Family Member',
+    avatar: '/testimonial-2-placeholder.jpg'
   },
   {
     quote:
       'AUM feels calm and caring. My father enjoys the daily routines and the companionship here.',
     name: 'Ramesh Gurung',
-    role: 'Son of a Resident'
+    role: 'Son of a Resident',
+    avatar: '/testimonial-1-placeholder.jpg'
   },
   {
     quote:
       'It is comforting to know my grandmother lives in a home that values her dignity every day.',
     name: 'Sita Tamang',
-    role: 'Granddaughter'
+    role: 'Granddaughter',
+    avatar: '/testimonial-3-placeholder.jpg'
   }
 ];
 
@@ -35,11 +38,12 @@ export function Testimonials() {
             <article key={testimonial.name} className="card-soft p-7">
               <p className="text-lg leading-8 text-ink/80">“{testimonial.quote}”</p>
               <div className="mt-8 flex items-center gap-4">
-                <div className="relative h-14 w-14 overflow-hidden rounded-full bg-sage-100">
+                <div className="relative h-[60px] w-[60px] overflow-hidden rounded-full bg-sage-100">
                   <Image
-                    src={`/testimonial-${index + 1}-placeholder.jpg`}
-                    alt={`${testimonial.name} placeholder photo`}
+                    src={testimonial.avatar}
+                    alt={`${testimonial.name}, ${testimonial.role.toLowerCase()} at AUM Old Age Home`}
                     fill
+                    sizes="60px"
                     className="object-cover"
                   />
                 </div>

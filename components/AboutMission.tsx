@@ -21,13 +21,13 @@ export function AboutMission() {
           </a>
         </div>
 
-        <div className="order-1 overflow-hidden rounded-[2rem] shadow-soft lg:order-2">
+        <div className="relative order-1 overflow-hidden rounded-2xl shadow-soft aspect-[45/46] lg:order-2">
           <Image
             src="/about-placeholder.jpg"
-            alt="Elderly care home atmosphere placeholder"
-            width={900}
-            height={920}
-            className="h-full w-full object-cover"
+            alt="Residents and caregivers sharing a calm moment at the old age home"
+            fill
+            sizes="(min-width: 1024px) 40vw, 100vw"
+            className="object-cover"
           />
         </div>
       </div>

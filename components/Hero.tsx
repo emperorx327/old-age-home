@@ -1,11 +1,17 @@
+import Image from 'next/image';
+
 export function Hero() {
   return (
     <section id="home" className="relative overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/hero-placeholder.jpg')" }}
+      <Image
+        src="/hero-placeholder.jpg"
+        alt="Caregivers supporting residents at AUM Old Age Home"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
       />
-      <div className="absolute inset-0 bg-slate-950/55" />
+      <div className="absolute inset-0 bg-black/45" />
       <div className="relative">
         <div className="section-shell flex min-h-[84vh] items-center py-16 sm:py-20">
           <div className="max-w-3xl text-white">
